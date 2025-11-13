@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  
+  /* IVO Brand Colors */
+  --green-blue: #1968B2;
+  --night: #141414;
+  --picton-blue: #00B4FF;
+  --black: #090909;
+  --anti-flash-white: #EFEFEF;
+  --pure-white: #FFFFFF;
+  --grid-bg: #2c2c2c;
+  --badge-blue: #174066;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-green-blue: var(--green-blue);
+  --color-night: var(--night);
+  --color-picton-blue: var(--picton-blue);
+  --color-black: var(--black);
+  --color-anti-flash-white: var(--anti-flash-white);
+  --color-pure-white: var(--pure-white);
+  --color-grid-bg: var(--grid-bg);
+  --color-badge-blue: var(--badge-blue);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+@keyframes scroll-slow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-scroll-slow {
+  animation: scroll-slow 60s linear infinite;
+}
