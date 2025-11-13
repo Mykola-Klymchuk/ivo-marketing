@@ -15,11 +15,11 @@ const PortalSection = () => {
                             <Badge text="Access" />
                         </div>
                         
-                        <h2 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-6">
+                        <h1 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-6">
                             <span className="text-pure-white">Streamlined</span> <br />
                             <span className="text-night">After-Sales & Training</span> <br />
                             <span className="text-pure-white">Portal</span>
-                        </h2>
+                        </h1>
                         
                         <p className="text-pure-white text-base lg:text-lg mb-8">
                             Our After-Sales & Training Portal is designed to provide seamless access to essential resources. Log in to find tailored support and training materials that enhance your experience.

@@ -33,10 +33,10 @@ const TestimonialSection = () => {
                             <Badge text="Access" />
                         </div>
                         
-                        <h2 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-6">
+                        <h1 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-6">
                             <span className="text-pure-white">Your Trusted Partner</span> <br />
                             <span className="bg-gradient-to-r from-green-blue to-picton-blue bg-clip-text text-transparent">in Cleaning Solutions</span>
-                        </h2>
+                        </h1>
                         
                         <p className="text-pure-white text-base lg:text-lg mb-8 leading-relaxed">
                             At iVO, we empower distributors and FM teams with cutting-edge cleaning technologies designed for efficiency and effectiveness. Our commitment to innovation ensures that you have the tools you need to succeed in a competitive market.

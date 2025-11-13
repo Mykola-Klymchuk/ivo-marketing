@@ -9,6 +9,9 @@ interface ProductCardProps {
     productImageAlt: string;
     onLearnMore?: () => void;
     onPlay?: () => void;
+    imageScale?: number;
+    imageTranslateY?: string;
+    imageObjectPosition?: string;
 }
 
 const ProductCard = ({ 
@@ -16,10 +19,21 @@ const ProductCard = ({
     productImage, 
     productImageAlt,
     onLearnMore,
-    onPlay
+    onPlay,
+    imageScale = 1.8,
+    imageTranslateY = '-40%',
+    imageObjectPosition = 'center -55%'
 }: ProductCardProps) => {
     return (
-        <article className="relative bg-night rounded-3xl overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.75),0_0_20px_rgba(0,0,0,0.25)]">
+        <article 
+            className="relative bg-night rounded-3xl overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.75),0_0_20px_rgba(0,0,0,0.25)]"
+            style={{
+                backgroundImage: 'url(/hero/Overlay.png)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+            }}
+        >
             <div className="p-6 lg:p-8 pb-4">
                 <div className="flex items-center gap-2 mb-4">
                     <div className="w-2 h-2 rounded-full bg-picton-blue" />
@@ -45,8 +59,8 @@ const ProductCard = ({
                         fill
                         className="object-contain"
                         style={{ 
-                            objectPosition: 'center -55%',
-                            transform: 'scale(1.8) translateY(-40%)',
+                            objectPosition: imageObjectPosition,
+                            transform: `scale(${imageScale}) translateY(${imageTranslateY})`,
                             transformOrigin: 'center 0%'
                         }}
                     />

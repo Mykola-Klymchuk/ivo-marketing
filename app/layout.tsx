@@ -1,17 +1,41 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/layout/header";
 import Footer from "./components/layout/footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const museo900 = localFont({
+  src: [
+    {
+      path: "../public/fonts/museo_900-webfont.woff2",
+      weight: "900",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/museo_900-webfont.woff",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-museo-900",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const articulatCFMedium = localFont({
+  src: [
+    {
+      path: "../public/fonts/articulat_cf_medium-webfont.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/articulat_cf_medium-webfont.woff",
+      weight: "500",
+      style: "normal",
+    },
+  ],
+  variable: "--font-articulat-cf-medium",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -27,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${museo900.variable} ${articulatCFMedium.variable} antialiased`}
       >
         <Header />
         {children}

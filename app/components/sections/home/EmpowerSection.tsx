@@ -29,10 +29,10 @@ const EmpowerSection = () => {
                     <div className="flex justify-center mb-6">
                         <Badge text="Innovation" />
                     </div>
-                    <h2 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-6 max-w-4xl mx-auto">
+                    <h1 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-6 max-w-4xl mx-auto">
                         <span className="text-pure-white">Empowering Your </span> <br />
                         <span className="bg-gradient-to-r from-green-blue to-picton-blue bg-clip-text text-transparent">Cleaning Solutions for Success</span>
-                    </h2>
+                    </h1>
                     <p className="text-pure-white text-base lg:text-lg max-w-4xl mx-auto mb-8">
                         Our commitment to being <span className="font-bold text-picton-blue"><i>Better, Faster, Safer, and Greener</i></span> drives everything we do. Discover how our innovative solutions can transform your operations.
                     </p>
@@ -81,7 +81,7 @@ const EmpowerSection = () => {
                                         className={`relative ${imageHeight.mobile} ${imageHeight.desktop} rounded overflow-hidden border border-night/10`}
                                     >
                                         <Image
-                                            src={`/sections/empover-section/${image}`}
+                                            src={`/sections/empover/${image}`}
                                             alt={`Cleaning equipment ${index + 1}`}
                                             fill
                                             className="object-cover"
@@ -99,7 +99,7 @@ const EmpowerSection = () => {
                                         className={`relative ${isWide ? 'col-span-2' : ''} ${imageHeight.mobile} ${imageHeight.desktop} rounded overflow-hidden border border-night/10`}
                                     >
                                         <Image
-                                            src={`/sections/empover-section/${image}`}
+                                            src={`/sections/empover/${image}`}
                                             alt={`Cleaning equipment ${index + 1}`}
                                             fill
                                             className="object-cover"

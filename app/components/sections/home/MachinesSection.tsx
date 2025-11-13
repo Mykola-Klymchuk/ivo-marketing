@@ -10,21 +10,33 @@ const products = [
         name: 'iVO OrbiMax 55',
         image: '/sections/machines/_BC_5685 copy.png',
         imageAlt: 'iVO OrbiMax 55 floor cleaning machine',
+        imageScale: 1.8,
+        imageTranslateY: '-40%',
+        imageObjectPosition: 'center -55%',
     },
     {
         name: 'iVO OrbiMax 40',
         image: '/sections/machines/_BC_5676 copy.png',
         imageAlt: 'PowerBrush XL 2.0 handheld scrubbing machine',
+        imageScale: 1.8,
+        imageTranslateY: '-40%',
+        imageObjectPosition: 'center -55%',
     },
     {
         name: 'iVO OrbiMax 30',
         image: '/sections/machines/_BC_5643 copy.png',
         imageAlt: 'iVO RovaWash 450 upright floor cleaning machine',
+        imageScale: 1.8,
+        imageTranslateY: '-40%',
+        imageObjectPosition: 'center -55%',
     },
     {
         name: 'iVO Machine 7',
         image: '/sections/machines/_BC_5549 copy.png',
         imageAlt: 'iVO cleaning machine',
+        imageScale: 1.65,
+        imageTranslateY: '-35%',
+        imageObjectPosition: 'center -55%',
     },
 ];
 
@@ -46,11 +58,11 @@ const MachinesSection = () => {
         <section className="relative bg-pure-white">
             <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-16 lg:pt-24 pb-8 lg:pb-12">
                 <div className="text-center mb-12 lg:mb-16">
-                    <h2 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-4">
+                    <h1 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-4">
                         <span className="text-green-blue">Discover Our </span> <br />
                         <span className="text-night">Innovative Machines</span> <br />
                         <span className="text-green-blue">Tailored for Every Cleaning Professional</span>
-                    </h2>
+                    </h1>
                 </div>
 
                 <div className="relative mb-12 px-8 lg:px-16">
@@ -83,6 +95,9 @@ const MachinesSection = () => {
                                         productImageAlt={product.imageAlt}
                                         onLearnMore={() => {}}
                                         onPlay={() => {}}
+                                        imageScale={product.imageScale}
+                                        imageTranslateY={product.imageTranslateY}
+                                        imageObjectPosition={product.imageObjectPosition}
                                     />
                                 </div>
                             ))}

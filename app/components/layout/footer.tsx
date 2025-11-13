@@ -39,7 +39,7 @@ const Footer = () => {
                             
                             <p className="text-pure-white/70 text-xs">
                                 By subscribing, you consent to receive updates in accordance with our{' '}
-                                <Link href="/privacy-policy" className="underline hover:text-picton-blue">
+                                <Link href="/privacy-policy" className="hover:text-picton-blue">
                                     Privacy Policy
                                 </Link>
                                 .

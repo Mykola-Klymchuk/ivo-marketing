@@ -8,10 +8,10 @@ const RolesSection = () => {
         <section className="bg-night text-pure-white pt-4 lg:pt-8 pb-12 lg:pb-12">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="text-center mb-12 lg:mb-10">
-                    <h2 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-4 max-w-3xl mx-auto">
-                        <span className="text-pure-white">Discover Tailored Solutions </span>
+                    <h1 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-4 max-w-3xl mx-auto">
+                        <span className="text-pure-white">Discover Tailored Solutions </span> <br />
                         <span className="bg-gradient-to-r from-green-blue to-picton-blue bg-clip-text text-transparent">for Every Role</span>
-                    </h2>
+                    </h1>
                     <p className="text-pure-white text-base lg:text-lg max-w-4xl mx-auto">
                         Our solutions are designed to meet the unique needs of each role in the cleaning industry. Choose your path below to find the resources that will empower you.
                     </p>
