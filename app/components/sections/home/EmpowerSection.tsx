@@ -85,6 +85,7 @@ const EmpowerSection = () => {
                                             alt={`Cleaning equipment ${index + 1}`}
                                             fill
                                             className="object-cover"
+                                            loading="lazy"
                                         />
                                     </div>
                                 );
@@ -103,6 +104,7 @@ const EmpowerSection = () => {
                                             alt={`Cleaning equipment ${index + 1}`}
                                             fill
                                             className="object-cover"
+                                            loading="lazy"
                                         />
                                     </div>
                                 );

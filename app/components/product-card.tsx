@@ -58,6 +58,7 @@ const ProductCard = ({
                         alt={productImageAlt}
                         fill
                         className="object-contain"
+                        loading="lazy"
                         style={{ 
                             objectPosition: imageObjectPosition,
                             transform: `scale(${imageScale}) translateY(${imageTranslateY})`,
@@ -76,6 +77,7 @@ const ProductCard = ({
                         width={40}
                         height={40}
                         className="w-10 h-10 brightness-0 invert"
+                        loading="lazy"
                     />
                 </button>
             </div>

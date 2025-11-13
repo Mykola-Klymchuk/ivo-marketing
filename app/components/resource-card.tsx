@@ -37,6 +37,7 @@ const ResourceCard = ({
                         alt={imageAlt}
                         fill
                         className="object-cover"
+                        loading="lazy"
                     />
                     <div className="absolute bottom-4 left-4">
                         <Button

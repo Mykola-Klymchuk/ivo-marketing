@@ -10,7 +10,7 @@ const HeroSection = () => {
             <div className="absolute inset-0 z-0">
                 <Image
                     src="/hero/hero-background.jpg"
-                    alt="Hero background"
+                    alt="Professional cleaning equipment and innovation"
                     fill
                     className="object-cover scale-110"
                     priority
@@ -41,10 +41,11 @@ const HeroSection = () => {
                             >
                                 <Image 
                                     src='/icons/linkedin-icon.png' 
-                                    alt="LinkedIn" 
+                                    alt="Visit iVO on LinkedIn" 
                                     width={32} 
                                     height={32}
                                     className="w-8 h-8"
+                                    loading="lazy"
                                 />
                             </Link>
                             <Link 
@@ -55,10 +56,11 @@ const HeroSection = () => {
                             >
                                 <Image 
                                     src='/icons/yt-icon.png' 
-                                    alt="YouTube" 
+                                    alt="Visit iVO on YouTube" 
                                     width={32} 
                                     height={32}
                                     className="w-8 h-8"
+                                    loading="lazy"
                                 />
                             </Link>
                         </div>
@@ -71,7 +73,7 @@ const HeroSection = () => {
                             onClick={() => {}}
                             className="flex items-center gap-2 text-base lg:text-lg font-bold"
                         >
-                            <Image src='/icons/ivologo-chat.png' alt="Chat" width={24} height={24} />
+                            <Image src='/icons/ivologo-chat.png' alt="Chat" width={24} height={24} loading="lazy" />
                             Chat with us!
                         </Button>
                     </div>

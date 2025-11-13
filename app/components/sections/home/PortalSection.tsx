@@ -66,6 +66,7 @@ const PortalSection = () => {
                                 alt="Team collaboration"
                                 fill
                                 className="object-cover"
+                                loading="lazy"
                             />
                         </div>
                     </div>

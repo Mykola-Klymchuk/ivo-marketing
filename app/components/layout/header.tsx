@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <header className="flex items-center justify-between px-16 py-4 bg-night w-full shadow-[0_8px_8px_rgba(0,0,0,0.5)] sticky top-0 z-50">
             <Link href="/">
-            <Image src='/logo/iVO-whitelogo-no-tagline.png' alt="Logo" width={100} height={20} />
+            <Image src='/logo/iVO-whitelogo-no-tagline.png' alt="iVO logo" width={100} height={20} />
             </Link>
             <nav>
                 <ul className="flex items-center gap-12">

@@ -66,6 +66,7 @@ const TestimonialSection = () => {
                                 alt="Business meeting"
                                 fill
                                 className="object-cover"
+                                loading="lazy"
                             />
                         </div>
                     </div>

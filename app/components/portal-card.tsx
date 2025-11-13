@@ -28,6 +28,7 @@ const PortalCard = ({
                     alt={imageAlt}
                     fill
                     className="object-cover"
+                    loading="lazy"
                 />
             </div>
 
@@ -41,6 +42,7 @@ const PortalCard = ({
                             alt="Login icon"
                             fill
                             className="brightness-0 invert object-contain"
+                            loading="lazy"
                         />
                     </div>
                     <h3 className="text-green-blue text-lg lg:text-xl font-bold mb-2">

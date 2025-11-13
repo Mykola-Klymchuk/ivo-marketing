@@ -30,6 +30,7 @@ const RoleCard = ({
                     alt={imageAlt}
                     fill
                     className={`object-cover ${imageScale || ''}`}
+                    loading="lazy"
                 />
                 <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-night via-night/80 to-transparent pointer-events-none" />
                 <div className="absolute -bottom-8 left-0 right-0 px-6 lg:px-8 text-center">
