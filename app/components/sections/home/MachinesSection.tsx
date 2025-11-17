@@ -4,41 +4,7 @@ import { useState } from 'react';
 import ProductCard from '../../product-card';
 import Button from '../../button';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-
-const products = [
-    {
-        name: 'iVO OrbiMax 55',
-        image: '/sections/machines/_BC_5685 copy.png',
-        imageAlt: 'iVO OrbiMax 55 floor cleaning machine',
-        imageScale: 1.8,
-        imageTranslateY: '-40%',
-        imageObjectPosition: 'center -55%',
-    },
-    {
-        name: 'iVO OrbiMax 40',
-        image: '/sections/machines/_BC_5676 copy.png',
-        imageAlt: 'PowerBrush XL 2.0 handheld scrubbing machine',
-        imageScale: 1.8,
-        imageTranslateY: '-40%',
-        imageObjectPosition: 'center -55%',
-    },
-    {
-        name: 'iVO OrbiMax 30',
-        image: '/sections/machines/_BC_5643 copy.png',
-        imageAlt: 'iVO RovaWash 450 upright floor cleaning machine',
-        imageScale: 1.8,
-        imageTranslateY: '-40%',
-        imageObjectPosition: 'center -55%',
-    },
-    {
-        name: 'iVO Machine 7',
-        image: '/sections/machines/_BC_5549 copy.png',
-        imageAlt: 'iVO cleaning machine',
-        imageScale: 1.65,
-        imageTranslateY: '-35%',
-        imageObjectPosition: 'center -55%',
-    },
-];
+import { products } from '../../../data/home';
 
 const MachinesSection = () => {
     const [currentIndex, setCurrentIndex] = useState(0);

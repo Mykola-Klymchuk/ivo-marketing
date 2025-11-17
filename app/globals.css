@@ -13,6 +13,10 @@
   --pure-white: #FFFFFF;
   --grid-bg: #2c2c2c;
   --badge-blue: #174066;
+  --blue: #016094;
+  --orange: #ff8314;
+  --teal: #1ab1a8;
+  --green: #2bb565;
 }
 
 @theme {
@@ -29,6 +33,10 @@
   --color-pure-white: var(--pure-white);
   --color-grid-bg: var(--grid-bg);
   --color-badge-blue: var(--badge-blue);
+  --color-blue: var(--blue);
+  --color-orange: var(--orange);
+  --color-teal: var(--teal);
+  --color-green: var(--green);
 }
 
 @media (prefers-color-scheme: dark) {

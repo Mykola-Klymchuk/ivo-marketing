@@ -4,24 +4,7 @@ import Image from 'next/image';
 import Button from '../../button';
 import Badge from '../../badge';
 import TestimonialCard from '../../testimonial-card';
-
-const testimonials = [
-    {
-        rating: 5,
-        text: "We've replaced our old scrubbing machine with the RovaWash and the difference is night and day. It cleans right up to the edges, dries instantly, and our reception floors have never looked better. Guests notice – and comment.",
-        author: 'Facilities Manager, 4-Star Hotel',
-    },
-    {
-        rating: 5,
-        text: "We just couldn't get our stair floors to look clean. After one demo with the PowerBrush XL 2.0, the grime was gone in minutes – and my team actually enjoyed using it.",
-        author: 'Facilities Manager, NHS Trust',
-    },
-    {
-        rating: 5,
-        text: "We needed a machine that could handle deep cleans without shutting down the area for hours. The OrbiMax not only got our floors spotless but left them dry in minutes. It's now our go-to for every term break.",
-        author: 'Site Supervisor, Secondary School',
-    },
-];
+import { testimonials } from '../../../data/home';
 
 const TestimonialSection = () => {
     return (

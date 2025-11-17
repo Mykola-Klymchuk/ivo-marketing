@@ -2,37 +2,7 @@
 
 import Button from '../../button';
 import ResourceCard from '../../resource-card';
-
-const resources = [
-    {
-        title: 'Safer, faster floor care on tough surfaces',
-        description: 'Teams now handle the toughest flooring types safely and quickly, with no resistance.',
-        imageSrc: '/sections/resources/frame03121.png',
-        imageAlt: 'Floor cleaning machine in action',
-        buttonText: 'Read the case study',
-    },
-    {
-        title: 'Training videos and quick guides',
-        description: 'Short how-to videos, maintenance tips, and staff-friendly guides.',
-        imageSrc: '/sections/resources/hands-laptop.jpg',
-        imageAlt: 'Training materials',
-        buttonText: 'Open the training hub',
-    },
-    {
-        title: 'ROI calculator',
-        description: 'Show savings and time wins in minutes, ready for your next bid.',
-        imageSrc: '/sections/resources/bluebusinessgraph.avif',
-        imageAlt: 'ROI calculator dashboard',
-        buttonText: 'Use the calculator',
-    },
-    {
-        title: 'Tender template',
-        description: 'Plug in your site details, submit with proof from real jobs.',
-        imageSrc: '/sections/resources/signing-the-documents.jpg',
-        imageAlt: 'Tender template documents',
-        buttonText: 'Download template',
-    },
-];
+import { resources } from '../../../data/home';
 
 const ResourcesSection = () => {
     return (
