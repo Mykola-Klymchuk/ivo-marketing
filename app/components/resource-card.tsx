@@ -1,5 +1,6 @@
 'use client';
 
+import clsx from 'clsx';
 import Image from 'next/image';
 import Button from './button';
 
@@ -10,6 +11,7 @@ interface ResourceCardProps {
     imageAlt: string;
     buttonText: string;
     onButtonClick?: () => void;
+    imageHeightClass?: string;
 }
 
 const ResourceCard = ({
@@ -18,7 +20,8 @@ const ResourceCard = ({
     imageSrc,
     imageAlt,
     buttonText,
-    onButtonClick
+    onButtonClick,
+    imageHeightClass = 'h-32'
 }: ResourceCardProps) => {
     return (
         <article className="bg-pure-white rounded-3xl overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.75),0_0_20px_rgba(0,0,0,0.25)] border border-anti-flash-white">
@@ -31,7 +34,7 @@ const ResourceCard = ({
                 </p>
             </div>
             <div className="px-6 pb-6 pt-0">
-                <div className="relative w-full h-32 rounded-3xl overflow-hidden">
+                <div className={clsx("relative w-full rounded-3xl overflow-hidden", imageHeightClass)}>
                     <Image
                         src={imageSrc}
                         alt={imageAlt}

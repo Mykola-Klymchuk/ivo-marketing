@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import Button from '../button';
+import EmailSubscription from '../email-subscription';
 import { quickLinks, resources } from '../../data/navigation';
 
 const Footer = () => {
@@ -15,35 +15,19 @@ const Footer = () => {
                         <div className="flex flex-col gap-4">
                             <Link href="/">
                                 <Image src='/logo/iVO-logo.png' alt="iVO logo" width={120} height={40} loading="lazy" />
-                            </Link>
+                    </Link>
                         </div>
-                        
+
                         <div className="flex flex-col gap-4">
                             <p className="text-pure-white text-base">
-                                Subscribe to our newsletter for the latest features and updates.
+                        Subscribe to our newsletter for the latest features and updates.
                             </p>
-                            
-                            <div className="flex items-center gap-2">
-                                <input
-                                    type="email"
-                                    placeholder="Your Email Here"
-                                    className="flex-1 px-4 py-2.5 rounded-full border border-pure-white bg-transparent text-pure-white placeholder:text-pure-white/50 focus:outline-none focus:ring-2 focus:ring-picton-blue"
-                                />
-                                <Button 
-                                    variant="solid-white" 
-                                    onClick={() => {}}
-                                >
-                                    Join
-                                </Button>
-                            </div>
-                            
-                            <p className="text-pure-white/70 text-xs">
-                                By subscribing, you consent to receive updates in accordance with our{' '}
-                                <Link href="/privacy-policy" className="hover:text-picton-blue">
-                                    Privacy Policy
-                                </Link>
-                                .
-                            </p>
+
+                            <EmailSubscription
+                            placeholder="Your Email Here"
+                                buttonText="Join"
+                                disclaimerText="By subscribing, you consent to receive updates in accordance with our Privacy Policy."
+                            />
                         </div>
                     </div>
 
@@ -74,7 +58,7 @@ const Footer = () => {
                                             className="text-pure-white hover:text-picton-blue transition-colors"
                                         >
                                             {link.name}
-                                        </Link>
+                        </Link>
                                     </li>
                                 ))}
                             </ul>
