@@ -66,17 +66,15 @@ const HeroSection = () => {
                         </div>
                     </div>
 
-                    <div className="flex justify-end lg:justify-end items-end">
                         <Button 
                             variant="chat-button" 
                             icon={false}
                             onClick={() => {}}
-                            className="flex items-center gap-2 text-base lg:text-lg font-bold"
+                        className="flex items-center gap-2 text-base lg:text-lg font-bold lg:self-end"
                         >
                             <Image src='/icons/ivologo-chat.png' alt="Chat" width={24} height={24} loading="lazy" />
                             Chat with us!
                         </Button>
-                    </div>
                 </div>
             </div>
         </section>

@@ -7,13 +7,13 @@ const CustomerSection = () => {
     return (
         <section className="bg-night pt-40 lg:pt-72 pb-16 lg:pb-24 -mt-28 lg:-mt-48">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                <header className="text-center mb-6 lg:mb-8">
-                    <h1 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-4">
+                <h1 className="text-center text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-4 lg:mb-6">
                         <span className="text-pure-white">Customer</span> <br />
                         <span className="bg-gradient-to-r from-green-blue to-picton-blue bg-clip-text text-transparent">Testimonials</span>
                     </h1>
-                    <p className="text-pure-white text-base lg:text-lg mb-8">Hear from our satisfied clients.</p>
-                </header>
+                <p className="text-center text-pure-white text-base lg:text-lg mb-8">
+                    Hear from our satisfied clients.
+                </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-1">
                     {customerTestimonials.map((customerTestimonial, index) => (
                         <TestimonialCard

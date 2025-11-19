@@ -9,13 +9,11 @@ const ResourcesSection = () => {
         <section className="relative">
             <div className="bg-pure-white pt-8 lg:pt-12 pb-16 lg:pb-24">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                    <div className="text-left mb-6 lg:mb-8">
-                        <h1 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-4">
+                    <h1 className="text-left text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-6 lg:mb-8">
                             <span className="text-green-blue">Explore Our</span> <br />
                             <span className="text-night">Persona-Specific Case Studies &</span> <br />
                             <span className="text-green-blue">Comprehensive Resources</span>
                         </h1>
-                    </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-1">
                         {resources.map((resource, index) => (
@@ -35,7 +33,7 @@ const ResourcesSection = () => {
 
             <div className="bg-green-blue pb-16 lg:pb-24 -mt-40 lg:-mt-48">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                    <div className="flex justify-center pt-24 lg:pt-32">
+                    <div className="pt-24 lg:pt-32 text-center">
                         <Button
                             variant="solid-blue-inverse"
                             onClick={() => {}}

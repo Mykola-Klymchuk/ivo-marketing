@@ -48,8 +48,7 @@ const MachinesSection = () => {
                         <ChevronRight className="w-12 h-12 lg:w-14 lg:h-14 text-night" strokeWidth={1} />
                     </button>
 
-                    <div className="overflow-visible">
-                        <div className="flex gap-6 lg:gap-8 justify-center py-6">
+                    <div className="flex gap-6 lg:gap-8 justify-center py-6 overflow-visible">
                             {visibleProducts.map((product, index) => (
                                 <div 
                                     key={`${product.title}-${index}`}
@@ -65,7 +64,6 @@ const MachinesSection = () => {
                                     />
                                 </div>
                             ))}
-                        </div>
                     </div>
                 </div>
 

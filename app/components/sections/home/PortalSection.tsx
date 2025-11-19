@@ -59,16 +59,14 @@ const PortalSection = () => {
                         </div>
                     </div>
 
-                    <div className="flex-1 lg:max-w-lg mt-8 lg:mt-16">
-                        <div className="relative w-full h-[480px] lg:h-[580px] rounded-3xl overflow-hidden">
-                            <Image
-                                src="/sections/portal/teamwork-image.jpg"
-                                alt="Team collaboration"
-                                fill
-                                className="object-cover"
-                                loading="lazy"
-                            />
-                        </div>
+                    <div className="flex-1 lg:max-w-lg mt-8 lg:mt-16 relative w-full h-[480px] lg:h-[580px] rounded-3xl overflow-hidden">
+                        <Image
+                            src="/sections/portal/teamwork-image.jpg"
+                            alt="Team collaboration"
+                            fill
+                            className="object-cover"
+                            loading="lazy"
+                        />
                     </div>
                 </div>
             </div>

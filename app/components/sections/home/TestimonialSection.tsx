@@ -42,16 +42,14 @@ const TestimonialSection = () => {
                         </div>
                     </div>
                     
-                    <div className="flex-1">
-                        <div className="relative w-full h-64 lg:h-80 rounded-3xl overflow-hidden mt-12 lg:mt-14">
-                            <Image
-                                src="/sections/testimonial/teamwork-image.jpg"
-                                alt="Business meeting"
-                                fill
-                                className="object-cover"
-                                loading="lazy"
-                            />
-                        </div>
+                    <div className="flex-1 relative w-full h-64 lg:h-80 rounded-3xl overflow-hidden mt-12 lg:mt-14">
+                        <Image
+                            src="/sections/testimonial/teamwork-image.jpg"
+                            alt="Business meeting"
+                            fill
+                            className="object-cover"
+                            loading="lazy"
+                        />
                     </div>
                 </div>
                 

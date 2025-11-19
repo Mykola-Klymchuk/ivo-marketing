@@ -16,9 +16,8 @@ const DemoRequestSection = () => {
                 />
             </div>
 
-            <div className="relative max-w-7xl mx-auto px-6 lg:px-6 py-4 lg:py-6 flex items-center min-h-[560px]">
-                <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 w-full">
-                    <div className="flex-1 flex flex-col gap-6 text-center lg:text-left z-10 w-full max-w-4xl mx-auto lg:mx-0">
+            <div className="relative max-w-7xl mx-auto px-6 lg:px-6 py-4 lg:py-6 min-h-[560px] flex items-center lg:pr-[40%]">
+                <div className="flex flex-col gap-6 text-center lg:text-left z-10 w-full max-w-4xl mx-auto lg:mx-0">
                         <h1 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold">
                             Request Your Personalized Demo
                         </h1>
@@ -32,9 +31,6 @@ const DemoRequestSection = () => {
                                 disclaimerText="By clicking Request Demo, you agree to our Terms and Conditions."
                             />
                         </div>
-                    </div>
-
-                    <div className="hidden lg:block flex-1"></div>
                 </div>
             </div>
         </section>
