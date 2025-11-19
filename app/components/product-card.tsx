@@ -2,31 +2,23 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
-import clsx from 'clsx';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Button from './button';
 import Badge from './badge';
 
 type BadgeType = 'better' | 'faster' | 'safer' | 'greener';
-type ProductCardMode = 'button' | 'video';
+type ProductCardVariant = 'basic' | 'expanded';
 
 interface ProductCardProps {
-    productName: string;
-    productImage: string;
-    productImageAlt: string;
+    variant: ProductCardVariant;
+    title: string;
+    images: string[];
+    imageAlt: string;
+    badges?: BadgeType[];
     onLearnMore?: () => void;
     onPlay?: () => void;
     onPurchase?: () => void;
     onDemo?: () => void;
-    imageScale?: number;
-    imageTranslateY?: string;
-    imageObjectPosition?: string;
-    imageHeightClass?: string;
-    badges?: BadgeType[];
-    ctaMode?: ProductCardMode;
-    subtitle?: string;
-    productImages?: string[];
-    isCarousel?: boolean;
 }
 
 const badgeLabels: Record<BadgeType, string> = {
@@ -43,87 +35,72 @@ const badgeVariantMap: Record<BadgeType, 'blue' | 'orange' | 'teal' | 'green'> =
     greener: 'green',
 };
 
-const ProductCard = ({
-    productName,
-    productImage,
-    productImageAlt,
-    onLearnMore,
-    onPlay,
-    onPurchase,
-    onDemo,
-    imageScale = 1.8,
-    imageTranslateY = '-40%',
-    imageObjectPosition = 'center -55%',
-    imageHeightClass = 'h-80 lg:h-96',
-    badges = [],
-    ctaMode = 'button',
-    subtitle = 'Watch product video',
-    productImages,
-    isCarousel = false,
-}: ProductCardProps) => {
-    const images = useMemo(() => {
-        if (productImages && productImages.length > 0) {
-            return productImages;
+const ProductCard = ({ variant, title, images, imageAlt, badges = [], onLearnMore, onPlay, onPurchase, onDemo }: ProductCardProps) => {
+    const gallery = useMemo(() => {
+        if (images && images.length > 0) {
+            return images;
         }
-        return [productImage];
-    }, [productImage, productImages]);
+
+        return ['/hero/Overlay.png'];
+    }, [images]);
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const showCarouselControls = variant === 'expanded' && gallery.length > 1;
+    const activeImage = gallery[currentImageIndex] ?? gallery[0];
 
     useEffect(() => {
         setCurrentImageIndex(0);
-    }, [images]);
-
-    const activeImage = images[currentImageIndex] ?? productImage;
-    const showCarouselControls = isCarousel && images.length > 1;
+    }, [gallery]);
 
     const handlePreviousImage = () => {
-        setCurrentImageIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+        setCurrentImageIndex((prev) => (prev === 0 ? gallery.length - 1 : prev - 1));
     };
 
     const handleNextImage = () => {
-        setCurrentImageIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+        setCurrentImageIndex((prev) => (prev === gallery.length - 1 ? 0 : prev + 1));
     };
 
+    const imageClickHandler = onPlay ?? onLearnMore ?? onPurchase ?? onDemo;
+    
     return (
         <article
-            className="relative bg-night rounded-3xl overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.75),0_0_20px_rgba(0,0,0,0.25)]"
+            className="relative flex flex-col w-full overflow-hidden rounded-3xl bg-night text-pure-white shadow-[0_4px_10px_rgba(0,0,0,0.75),0_0_20px_rgba(0,0,0,0.25)]"
             style={{
                 backgroundImage: 'url(/hero/Overlay.png)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
             }}
         >
-            <div className="p-6 lg:p-8 pb-4">
-                <div className="flex items-start gap-3 mb-4">
+            <div className="p-4 lg:p-5 pb-2 space-y-3">
+                <div className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-picton-blue mt-2" />
-                    <div className="flex-1 text-left">
-                        <h3 className="text-pure-white text-lg lg:text-xl font-bold">{productName}</h3>
-                        {ctaMode === 'video' && (
+                    <div className="flex-1">
+                        <h3 className="text-lg lg:text-xl font-semibold leading-tight">{title}</h3>
+                        {variant === 'basic' ? (
+                            <Button
+                                variant="solid-white"
+                                onClick={onLearnMore}
+                                className="mt-2 text-xs lg:text-sm whitespace-nowrap"
+                            >
+                                Learn more
+                            </Button>
+                        ) : (
                             <button
                                 type="button"
                                 onClick={onPlay}
-                                className="text-sm text-pure-white/80 underline underline-offset-4 hover:text-pure-white"
+                                className="mt-1 text-xs lg:text-sm text-pure-white/80 underline underline-offset-4 hover:text-pure-white transition-colors cursor-pointer"
                             >
-                                {subtitle}
+                                Watch product video
                             </button>
                         )}
                     </div>
                 </div>
 
-                <div className="pl-5">
-                    {ctaMode === 'button' ? (
-                        <Button variant="solid-white" onClick={onLearnMore} className="text-sm">
-                            Learn more
-                        </Button>
-                    ) : null}
-
-                    {badges.length > 0 && (
-                        <div className="flex flex-wrap gap-2 mt-4">
+                {variant === 'expanded' && badges.length > 0 && (
+                    <div className="inline-grid gap-x-0.5 gap-y-1 justify-items-start [grid-template-columns:max-content_max-content] pl-4">
                             {badges.map((badge) => (
                                 <Badge
-                                    key={`${productName}-${badge}`}
+                                key={`${title}-${badge}`}
                                     text={badgeLabels[badge]}
                                     variant={badgeVariantMap[badge]}
                                     showIcon={false}
@@ -131,25 +108,16 @@ const ProductCard = ({
                             ))}
                         </div>
                     )}
-                </div>
             </div>
 
-            <div
-                className={clsx('relative w-full', imageHeightClass)}
-                style={{ paddingTop: '20%', marginTop: '-20%' }}
-            >
-                <div className="relative w-full h-full">
-                    <Image
+            <div className="relative px-1.5 lg:px-2 pb-1">
+                <div className="relative w-full flex justify-center">
+                    <img
                         src={activeImage}
-                        alt={productImageAlt}
-                        fill
-                        className="object-contain"
+                        alt={imageAlt}
+                        className="w-full h-auto max-h-[420px] object-contain select-none"
                         loading="lazy"
-                        style={{
-                            objectPosition: imageObjectPosition,
-                            transform: `scale(${imageScale}) translateY(${imageTranslateY})`,
-                            transformOrigin: 'center 0%',
-                        }}
+                        onClick={imageClickHandler}
                     />
                 </div>
 
@@ -158,27 +126,30 @@ const ProductCard = ({
                         <button
                             type="button"
                             onClick={handlePreviousImage}
-                            className="absolute left-4 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/40 text-pure-white flex items-center justify-center hover:bg-black/60 transition"
-                            aria-label="Попереднє зображення"
+                            className="absolute left-1.5 md:left-3 top-1/2 -translate-y-1/2 w-14 h-14 text-pure-white flex items-center justify-center hover:scale-105 transition cursor-pointer"
+                            aria-label="Previous image"
                         >
-                            <ChevronLeft className="w-5 h-5" />
+                            <ChevronLeft className="w-7 h-7 drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]" />
                         </button>
                         <button
                             type="button"
                             onClick={handleNextImage}
-                            className="absolute right-4 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/40 text-pure-white flex items-center justify-center hover:bg-black/60 transition"
-                            aria-label="Наступне зображення"
+                            className="absolute right-1.5 md:right-3 top-1/2 -translate-y-1/2 w-14 h-14 text-pure-white flex items-center justify-center hover:scale-105 transition cursor-pointer"
+                            aria-label="Next image"
                         >
-                            <ChevronRight className="w-5 h-5" />
+                            <ChevronRight className="w-7 h-7 drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]" />
                         </button>
                     </>
                 )}
+            </div>
 
-                {ctaMode === 'button' ? (
+            <div className="px-4 lg:px-5 pb-4 mt-auto">
+                {variant === 'basic' ? (
+                    <div className="flex justify-end">
                     <button
                         type="button"
                         onClick={onPlay}
-                        className="absolute bottom-4 right-4 w-10 h-10 flex items-center justify-center hover:opacity-80 transition-opacity z-10"
+                            className="w-10 h-10 flex items-center justify-center hover:opacity-80 transition-opacity cursor-pointer"
                         aria-label="Play video"
                     >
                         <Image
@@ -190,22 +161,15 @@ const ProductCard = ({
                             loading="lazy"
                         />
                     </button>
+                    </div>
                 ) : (
-                    <div className="absolute bottom-4 right-4 flex items-center gap-2">
-                        <button
-                            type="button"
-                            onClick={onPurchase}
-                            className="px-4 py-1.5 rounded-full text-xs font-semibold text-pure-white bg-[var(--blue)] shadow-[0_4px_12px_rgba(0,0,0,0.35)] hover:opacity-90 transition"
-                        >
+                    <div className="flex justify-end gap-3">
+                        <Button variant="solid-blue" onClick={onPurchase}>
                             Purchase
-                        </button>
-                        <button
-                            type="button"
-                            onClick={onDemo}
-                            className="px-4 py-1.5 rounded-full text-xs font-semibold text-night bg-pure-white shadow-[0_4px_12px_rgba(0,0,0,0.35)] hover:bg-anti-flash-white transition"
-                        >
+                        </Button>
+                        <Button variant="solid-white" onClick={onDemo}>
                             Demo
-                        </button>
+                        </Button>
                     </div>
                 )}
             </div>

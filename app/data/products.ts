@@ -19,7 +19,7 @@ export const solutions = [
         title: 'Safer Work Environments',
         description:
             'Prioritize safety with user-friendly machines that minimize risk and ensure compliance.',
-            imageSrc: '/sections/solutions-highlight/20240424_111515.jpg',
+        imageSrc: '/sections/solutions-highlight/20240424_111515.jpg',
         imageAlt: 'Operator cleaning ceiling vents with equipment',
         variant: 'teal' as const,
     },
@@ -36,91 +36,65 @@ export const solutions = [
 type ProductBadge = 'better' | 'faster' | 'safer' | 'greener';
 
 interface ProductShowcaseItem {
-    name: string;
-    image: string;
+    title: string;
+    images: string[];
     imageAlt: string;
-    imageScale: number;
-    imageTranslateY: string;
-    imageObjectPosition: string;
-    badges: ProductBadge[];
-    subtitle?: string;
-    productImages?: string[];
-    isCarousel?: boolean;
-    imageHeightClass?: string;
 }
 
 export const productShowcase: ProductShowcaseItem[] = [
     {
-        name: 'iVO Daily X1',
-        image: '/sections/machines/_BC_5685 copy.png',
-        imageAlt: 'iVO Daily X1 scrubbing machine',
-        imageScale: 1.8,
-        imageTranslateY: '-40%',
-        imageObjectPosition: 'center -50%',
-        badges: ['better', 'faster', 'safer', 'greener'],
-        subtitle: 'Watch product video',
-        productImages: ['/sections/machines/_BC_5685 copy.png'],
-        isCarousel: true,
+        title: 'OrbiMax 30',
+        images: [
+            '/sections/machines/OrbiMax 30/_BC_5640 copy.png',
+            '/sections/machines/OrbiMax 30/_BC_5641 copy.png',
+            '/sections/machines/OrbiMax 30/_BC_5644 copy.png',
+        ],
+        imageAlt: 'OrbiMax 30 floor cleaning machine',
     },
     {
-        name: 'PowerBrush XL 2.0',
-        image: '/sections/machines/_BC_5676 copy.png',
-        imageAlt: 'PowerBrush XL 2.0 handheld scrubber',
-        imageScale: 1.85,
-        imageTranslateY: '-38%',
-        imageObjectPosition: 'center -45%',
-        badges: ['better', 'faster', 'safer', 'greener'],
-        subtitle: 'Watch product video',
-        productImages: ['/sections/machines/_BC_5676 copy.png'],
-        isCarousel: true,
+        title: 'MobiPure',
+        images: [
+            '/sections/machines/MobiPure/_BC_5738 copy.png',
+            '/sections/machines/MobiPure/_BC_5745 copy.png',
+            '/sections/machines/MobiPure/_BC_5749 copy.png',
+        ],
+        imageAlt: 'MobiPure mobile floor cleaning machine',
     },
     {
-        name: 'iVO RovaWash 450',
-        image: '/sections/machines/_BC_5643 copy.png',
-        imageAlt: 'iVO RovaWash upright machine',
-        imageScale: 1.75,
-        imageTranslateY: '-42%',
-        imageObjectPosition: 'center -48%',
-        badges: ['better', 'faster', 'safer', 'greener'],
-        subtitle: 'Watch product video',
-        productImages: ['/sections/machines/_BC_5643 copy.png'],
-        isCarousel: true,
+        title: 'OrbiMax 40',
+        images: [
+            '/sections/machines/OrbiMax 40/_BC_5672 copy.png',
+            '/sections/machines/OrbiMax 40/_BC_5674 copy.png',
+            '/sections/machines/OrbiMax 40/_BC_5678 copy.png',
+        ],
+        imageAlt: 'OrbiMax 40 floor cleaning machine',
     },
     {
-        name: 'CarpertKing',
-        image: '/sections/machines/_BC_5549 copy.png',
+        title: 'CarpertKing',
+        images: [
+            '/sections/machines/CarpetKing/_BC_5765 copy.png',
+            '/sections/machines/CarpetKing/_BC_5764 copy.png',
+            '/sections/machines/CarpetKing/_BC_5754 copy.png',
+        ],
         imageAlt: 'CarpertKing extraction system',
-        imageScale: 1.65,
-        imageTranslateY: '-35%',
-        imageObjectPosition: 'center -40%',
-        badges: ['better', 'faster', 'safer', 'greener'],
-        subtitle: 'Watch product video',
-        productImages: ['/sections/machines/_BC_5549 copy.png'],
-        isCarousel: true,
     },
     {
-        name: 'iVO OrbiMax 55',
-        image: '/sections/machines/_BC_5685 copy.png',
-        imageAlt: 'iVO OrbiMax 55 orbital scrubber',
-        imageScale: 1.8,
-        imageTranslateY: '-42%',
-        imageObjectPosition: 'center -55%',
-        badges: ['better', 'faster', 'safer', 'greener'],
-        subtitle: 'Watch product video',
-        productImages: ['/sections/machines/_BC_5685 copy.png'],
-        isCarousel: true,
+        title: 'RovaWash 250',
+        images: [
+            '/sections/machines/RovaWash 250/_BC_5568 copy.png',
+            '/sections/machines/RovaWash 250/_BC_5569 copy.png',
+            '/sections/machines/RovaWash 250/_BC_5567 copy.png',
+        ],
+        imageAlt: 'RovaWash 250 upright floor cleaning machine',
     },
     {
-        name: 'MultiClean 30',
-        image: '/sections/machines/_BC_5549 copy.png',
+        title: 'MultiClean 30',
+        images: [
+            '/sections/machines/MultiClean30/_BC_5780 copy.png',
+            '/sections/machines/MultiClean30/_BC_5781 copy.png',
+            '/sections/machines/MultiClean30/_BC_5784 copy.png',
+        ],
         imageAlt: 'MultiClean 30 cleaning system',
-        imageScale: 1.6,
-        imageTranslateY: '-32%',
-        imageObjectPosition: 'center -38%',
-        badges: ['better', 'faster', 'safer', 'greener'],
-        subtitle: 'Watch product video',
-        productImages: ['/sections/machines/_BC_5549 copy.png'],
-        isCarousel: true,
     },
 ];
 

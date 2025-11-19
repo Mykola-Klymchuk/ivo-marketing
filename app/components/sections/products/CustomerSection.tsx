@@ -5,7 +5,7 @@ import { customerTestimonials } from "@/app/data/products";
 
 const CustomerSection = () => {
     return (
-        <section className="bg-night pt-60 lg:pt-96 pb-24 lg:pb-32 -mt-40 lg:-mt-64">
+        <section className="bg-night pt-40 lg:pt-72 pb-16 lg:pb-24 -mt-28 lg:-mt-48">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <header className="text-center mb-6 lg:mb-8">
                     <h1 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-4">

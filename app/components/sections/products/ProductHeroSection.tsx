@@ -6,7 +6,7 @@ import Button from '../../button';
 const ProductHeroSection = () => {
     return (
         <section className="bg-night text-pure-white">
-            <div className="max-w-6xl lg:max-w-7xl mx-auto px-6 lg:px-8 pt-16 lg:pt-24 pb-12 lg:pb-20 flex flex-col items-center text-center gap-10">
+            <div className="max-w-6xl lg:max-w-7xl mx-auto px-6 lg:px-8 pt-12 lg:pt-16 pb-10 lg:pb-16 flex flex-col items-center text-center gap-8">
                 <div className="flex flex-col items-center text-center gap-2">
                     <div className="flex flex-col items-center text-center gap-1">
                         <h1 className="text-3xl lg:text-5xl xl:text-6xl font-extrabold leading-tight">

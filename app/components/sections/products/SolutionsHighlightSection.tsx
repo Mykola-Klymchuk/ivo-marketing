@@ -7,7 +7,7 @@ import { solutions } from '../../../data/products';
 const SolutionsHighlightSection = () => {
     return (
         <section className="bg-night text-pure-white">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24 flex flex-col items-center text-center gap-10">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 lg:py-16 flex flex-col items-center text-center gap-8">
                 <div className="flex flex-col items-center text-center gap-4 max-w-3xl">
                     <h1 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-tight">
                         <span className="text-pure-white">Discover Your</span>{' '}

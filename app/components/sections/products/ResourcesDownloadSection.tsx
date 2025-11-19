@@ -7,7 +7,7 @@ import { blogPosts } from '../../../data/products';
 const ResourcesDownloadSection = () => {
     return (
         <section className="bg-night text-pure-white overflow-x-hidden">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-12 lg:pt-12 pb-16 lg:pb-24">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-10 lg:pt-12 pb-12 lg:pb-16">
                 <div className="text-center mb-8 lg:mb-12">
                     <div className="flex justify-center mb-6">
                         <Badge text="Resources" />

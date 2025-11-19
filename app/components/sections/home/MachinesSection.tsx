@@ -52,18 +52,16 @@ const MachinesSection = () => {
                         <div className="flex gap-6 lg:gap-8 justify-center py-6">
                             {visibleProducts.map((product, index) => (
                                 <div 
-                                    key={`${product.name}-${index}`}
+                                    key={`${product.title}-${index}`}
                                     className="flex-shrink-0 w-full max-w-sm"
                                 >
                                     <ProductCard
-                                        productName={product.name}
-                                        productImage={product.image}
-                                        productImageAlt={product.imageAlt}
+                                        variant="basic"
+                                        title={product.title}
+                                        images={product.images}
+                                        imageAlt={product.imageAlt}
                                         onLearnMore={() => {}}
                                         onPlay={() => {}}
-                                        imageScale={product.imageScale}
-                                        imageTranslateY={product.imageTranslateY}
-                                        imageObjectPosition={product.imageObjectPosition}
                                     />
                                 </div>
                             ))}

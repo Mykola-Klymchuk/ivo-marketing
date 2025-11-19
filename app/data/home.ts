@@ -1,35 +1,23 @@
 export const products = [
     {
-        name: 'iVO OrbiMax 55',
-        image: '/sections/machines/_BC_5685 copy.png',
+        title: 'iVO OrbiMax 55',
+        images: ['/sections/machines/OrbiMax 55/_BC_5685 copy.png'],
         imageAlt: 'iVO OrbiMax 55 floor cleaning machine',
-        imageScale: 1.8,
-        imageTranslateY: '-40%',
-        imageObjectPosition: 'center -55%',
     },
     {
-        name: 'iVO OrbiMax 40',
-        image: '/sections/machines/_BC_5676 copy.png',
+        title: 'iVO OrbiMax 40',
+        images: ['/sections/machines/OrbiMax 40/_BC_5676 copy.png'],
         imageAlt: 'PowerBrush XL 2.0 handheld scrubbing machine',
-        imageScale: 1.8,
-        imageTranslateY: '-40%',
-        imageObjectPosition: 'center -55%',
     },
     {
-        name: 'iVO OrbiMax 30',
-        image: '/sections/machines/_BC_5643 copy.png',
+        title: 'iVO OrbiMax 30',
+        images: ['/sections/machines/OrbiMax 30/_BC_5643 copy.png'],
         imageAlt: 'iVO RovaWash 450 upright floor cleaning machine',
-        imageScale: 1.8,
-        imageTranslateY: '-40%',
-        imageObjectPosition: 'center -55%',
     },
     {
-        name: 'iVO Machine 7',
-        image: '/sections/machines/_BC_5549 copy.png',
+        title: 'iVO Machine 7',
+        images: ['/sections/machines/OrbiMax 10/_BC_5549 copy.png'],
         imageAlt: 'iVO cleaning machine',
-        imageScale: 1.65,
-        imageTranslateY: '-35%',
-        imageObjectPosition: 'center -55%',
     },
 ];
 

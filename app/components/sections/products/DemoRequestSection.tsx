@@ -5,7 +5,7 @@ import EmailSubscription from '../../email-subscription';
 
 const DemoRequestSection = () => {
     return (
-        <section className="relative bg-green-blue text-pure-white overflow-hidden min-h-[600px]">
+        <section className="relative bg-green-blue text-pure-white overflow-hidden min-h-[560px]">
             <div className="absolute inset-y-0 right-0 w-[40%]">
                 <Image
                     src="/hero/frame36591.png"
@@ -16,13 +16,13 @@ const DemoRequestSection = () => {
                 />
             </div>
 
-            <div className="relative max-w-7xl mx-auto px-6 lg:px-6 py-6 lg:py-6 flex items-center min-h-[600px]">
-                <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-                    <div className="flex-1 flex flex-col gap-6 text-center lg:text-left z-10">
+            <div className="relative max-w-7xl mx-auto px-6 lg:px-6 py-4 lg:py-6 flex items-center min-h-[560px]">
+                <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 w-full">
+                    <div className="flex-1 flex flex-col gap-6 text-center lg:text-left z-10 w-full max-w-4xl mx-auto lg:mx-0">
                         <h1 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold">
                             Request Your Personalized Demo
                         </h1>
-                        <p className="text-base lg:text-lg text-pure-white/90 max-w-2xl mx-auto lg:mx-0">
+                        <p className="text-base lg:text-lg text-pure-white/90 max-w-3xl mx-auto lg:mx-0">
                             Experience the future of floor cleaning technology tailored to your needs. Request a demo today!
                         </p>
                         <div className="max-w-lg mx-auto lg:mx-0">

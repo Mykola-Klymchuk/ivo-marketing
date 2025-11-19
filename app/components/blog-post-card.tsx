@@ -37,7 +37,11 @@ const BlogPostCard = ({
                 </div>
             </div>
             <div className="p-4 pb-3 flex-1">
-                <h3 className="text-green-blue text-lg font-bold mb-1">
+                <h3
+                    className="text-green-blue text-lg font-bold mb-1 cursor-pointer hover:text-green-blue/80 transition-colors"
+                    role="button"
+                    tabIndex={0}
+                >
                     {title}
                 </h3>
                 <p className="text-night/70 text-sm">

@@ -7,7 +7,7 @@ import { productShowcase } from '../../../data/products';
 const ProductCarouselSection = () => {
     return (
         <section className="bg-pure-white text-night">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 lg:py-16">
                 <div className="text-center max-w-3xl mx-auto mb-10 lg:mb-12">
                     <h1 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-tight mb-3">
                         <span className="text-green-blue">Discover Our</span> <br />
@@ -20,24 +20,16 @@ const ProductCarouselSection = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-10">
                     {productShowcase.map((product) => (
-                        <div key={product.name} className="h-full">
+                        <div key={product.title} className="h-full">
                             <ProductCard
-                                productName={product.name}
-                                productImage={product.image}
-                                productImageAlt={product.imageAlt}
-                                onLearnMore={() => {}}
+                                variant="expanded"
+                                title={product.title}
+                                images={product.images}
+                                imageAlt={product.imageAlt}
+                                badges={['better', 'faster', 'safer', 'greener']}
                                 onPlay={() => {}}
                                 onPurchase={() => {}}
                                 onDemo={() => {}}
-                                imageScale={product.imageScale}
-                                imageTranslateY={product.imageTranslateY}
-                                imageObjectPosition={product.imageObjectPosition}
-                                imageHeightClass={product.imageHeightClass}
-                                badges={product.badges}
-                                subtitle={product.subtitle}
-                                productImages={product.productImages}
-                                isCarousel={product.isCarousel}
-                                ctaMode="video"
                             />
                         </div>
                     ))}
