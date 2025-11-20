@@ -19,7 +19,7 @@ const images = [
     'frame03041.png',
 ];
 
-const imageHeight = { mobile: 'h-32', desktop: 'lg:h-44' };
+const imageHeight = { mobile: 'h-32', desktop: 'lg:h-48' };
 
 const EmpowerSection = () => {
     return (
@@ -53,10 +53,10 @@ const EmpowerSection = () => {
             </div>
 
             <div className="relative -mx-6 lg:-mx-8 bg-grid-bg py-1 mb-10 lg:py-2 overflow-x-hidden">
-                <div className="absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-night via-night/95 via-night/70 to-transparent pointer-events-none z-10" />
-                <div className="absolute inset-y-0 right-0 w-48 bg-gradient-to-l from-night via-night/95 via-night/70 to-transparent pointer-events-none z-10" />
+                <div className="absolute inset-y-0 left-0 w-64 bg-gradient-to-r from-night via-night/95 via-night/70 to-night/0 pointer-events-none z-10" />
+                <div className="absolute inset-y-0 right-0 w-64 bg-gradient-to-l from-night via-night/95 via-night/70 to-night/0 pointer-events-none z-10" />
                 
-                <div className="animate-scroll-slow flex gap-0.5 lg:gap-1" style={{ width: 'max-content' }}>
+                <div className="animate-scroll-slow flex gap-1 lg:gap-2" style={{ width: 'max-content' }}>
                     {[...images, ...images, ...images].reduce((acc: any[], image: string, index: number) => {
                         const blockIndex = Math.floor(index / 7);
                         const positionInBlock = index % 7;
@@ -71,7 +71,7 @@ const EmpowerSection = () => {
                     }, []).map((block, blockIndex) => (
                         <div 
                             key={`block-${blockIndex}`}
-                            className="grid grid-cols-4 gap-0.5 lg:gap-1 flex-shrink-0"
+                            className="grid grid-cols-4 gap-1 lg:gap-2 flex-shrink-0"
                             style={{ width: '100vw' }}
                         >
                             {block.slice(0, 4).map(({ image, index }: any) => {

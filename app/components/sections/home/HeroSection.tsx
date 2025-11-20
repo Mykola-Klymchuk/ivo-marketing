@@ -15,7 +15,7 @@ const HeroSection = () => {
                     className="object-cover scale-110"
                     priority
                 />
-                <div className="absolute bottom-0 left-0 right-0 h-4/7 bg-gradient-to-t from-black via-black/90 to-transparent pointer-events-none" />
+                <div className="absolute bottom-0 left-0 right-0 h-4/7 bg-gradient-to-t from-night via-night/90 to-transparent pointer-events-none" />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 min-h-screen flex items-end pb-16 lg:pb-24">

@@ -47,7 +47,7 @@ const RolesSection = () => {
                         }}
                     />
                     <div className="absolute inset-0 bg-black/50" />
-                    <div className="absolute inset-0 left-[10%] bg-gradient-to-l from-green-blue via-green-blue/80 to-transparent" />
+                    <div className="absolute inset-0 left-[10%] bg-gradient-to-l from-green-blue via-green-blue to-transparent" />
                     <div className="absolute inset-0 flex items-center justify-end gap-6 lg:gap-8 pr-10 lg:pr-16">
                         <h3 className="text-pure-white text-2xl lg:text-3xl font-bold">
                             Are you a distributor?
