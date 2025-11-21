@@ -22,9 +22,16 @@ const SolutionsHighlightSection = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 w-full">
-                    {solutions.map((solution) => (
-                        <SolutionCard key={solution.title} {...solution} />
-                    ))}
+                    {solutions.map((solution, index) => {
+                        const variants: Array<'blue' | 'orange' | 'teal' | 'green'> = ['blue', 'orange', 'teal', 'green'];
+                        return (
+                            <SolutionCard 
+                                key={solution.title} 
+                                {...solution} 
+                                variant={variants[index]}
+                            />
+                        );
+                    })}
                 </div>
 
                 <div className="flex flex-wrap items-center justify-center gap-3">

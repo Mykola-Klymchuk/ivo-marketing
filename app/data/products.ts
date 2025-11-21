@@ -5,7 +5,6 @@ export const solutions = [
             'Achieve superior cleanliness with advanced technology engineered for efficiency and effectiveness.',
         imageSrc: '/sections/solutions-highlight/frame01231.png',
         imageAlt: 'Close-up of clean flooring surface',
-        variant: 'blue' as const,
     },
     {
         title: 'Faster Cleaning Processes',
@@ -13,7 +12,6 @@ export const solutions = [
             'Reduce downtime and enhance productivity with our fast and reliable cleaning machines.',
         imageSrc: '/sections/solutions-highlight/frame11256.png',
         imageAlt: 'Cleaning machine gliding across a hallway',
-        variant: 'orange' as const,
     },
     {
         title: 'Safer Work Environments',
@@ -21,7 +19,6 @@ export const solutions = [
             'Prioritize safety with user-friendly machines that minimize risk and ensure compliance.',
         imageSrc: '/sections/solutions-highlight/20240424_111515.jpg',
         imageAlt: 'Operator cleaning ceiling vents with equipment',
-        variant: 'teal' as const,
     },
     {
         title: 'Greener Cleaning Options',
@@ -29,7 +26,6 @@ export const solutions = [
             'Choose eco-friendly solutions that reduce your carbon footprint while maintaining high standards.',
         imageSrc: '/sections/solutions-highlight/frame02881.png',
         imageAlt: 'Technician cleaning building exterior',
-        variant: 'green' as const,
     },
 ];
 
